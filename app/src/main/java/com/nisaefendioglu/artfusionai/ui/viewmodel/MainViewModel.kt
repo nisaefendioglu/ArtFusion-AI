@@ -1,7 +1,6 @@
 package com.nisaefendioglu.artfusionai.ui.viewmodel
 
 import android.app.Application
-import android.util.Log
 import android.widget.Toast
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
@@ -48,7 +47,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     private fun handleError(message: String) {
-        Log.e("MainViewModel", message)
         showError(message)
     }
 

@@ -49,9 +49,10 @@ fun ImageGeneratorScreen(viewModel: MainViewModel) {
     var isLoading by viewModel.isLoading
     var selectedImageUrl by remember { mutableStateOf<String?>(null) }
     var expanded by remember { mutableStateOf(false) }
+    var showImage by remember { mutableStateOf(true) }
 
     val animatedHeight by animateDpAsState(
-        targetValue = if (expanded) 150.dp else 400.dp,
+        targetValue = if (expanded) 150.dp else 350.dp,
         animationSpec = tween(durationMillis = 500)
     )
 
@@ -63,11 +64,7 @@ fun ImageGeneratorScreen(viewModel: MainViewModel) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(
-                brush = Brush.verticalGradient(
-                    colors = listOf(Color.White.copy(alpha = 0.9f), Color.White)
-                )
-            )
+            .background(Color.White)
     ) {
         Column(
             modifier = Modifier.fillMaxSize(),
@@ -134,6 +131,7 @@ fun ImageGeneratorScreen(viewModel: MainViewModel) {
                             if (question.isNotBlank()) {
                                 expanded = !expanded
                                 viewModel.fetchImages(question)
+                                showImage = false
                             } else {
                                 Toast.makeText(
                                     viewModel.getApplication(),
@@ -184,5 +182,22 @@ fun ImageGeneratorScreen(viewModel: MainViewModel) {
         selectedImageUrl?.let { imageUrl ->
             ImageDialog(imageUrl, onDismiss = { selectedImageUrl = null })
         }
+
+        if (showImage && !expanded) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(bottom = 0.dp)
+            ) {
+                GifImage(
+                    modifier = Modifier
+                        .align(Alignment.BottomCenter)
+                        .fillMaxWidth()
+                        .height(300.dp)
+                        .padding(0.dp)
+                )
+            }
+        }
+
     }
 }

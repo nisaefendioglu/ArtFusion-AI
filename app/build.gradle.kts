@@ -70,10 +70,13 @@ dependencies {
     implementation(libs.converter.gson)
     implementation(libs.glide)
     implementation(libs.coil.compose)
+    implementation(libs.coil.gif)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.runtime.livedata)
     implementation(libs.androidx.runtime)
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.accompanist.permissions)
+    implementation(libs.androidx.core.splashscreen)
+    implementation(libs.android.gif.drawable)
 
 }
