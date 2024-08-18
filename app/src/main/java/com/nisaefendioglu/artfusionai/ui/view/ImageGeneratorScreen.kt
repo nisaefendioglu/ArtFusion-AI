@@ -38,6 +38,9 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.nisaefendioglu.artfusionai.data.model.ImageItem
+import com.nisaefendioglu.artfusionai.ui.theme.DarkBlue
+import com.nisaefendioglu.artfusionai.ui.theme.DarkGray
+import com.nisaefendioglu.artfusionai.ui.theme.LightBlue
 import com.nisaefendioglu.artfusionai.ui.viewmodel.MainViewModel
 
 @Composable
@@ -77,7 +80,7 @@ fun ImageGeneratorScreen(viewModel: MainViewModel) {
                     .height(animatedHeight)
                     .background(
                         brush = Brush.horizontalGradient(
-                            colors = listOf(Color(0xFF80E0FF), Color(0xFF00008B)),
+                            colors = listOf(LightBlue, DarkBlue),
                         ),
                         shape = RoundedCornerShape(bottomEnd = 50.dp, bottomStart = 50.dp)
                     )
@@ -144,7 +147,7 @@ fun ImageGeneratorScreen(viewModel: MainViewModel) {
                             .height(48.dp)
                             .padding(1.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color(0xFF001d3d),
+                            containerColor = DarkGray,
                             contentColor = Color.White
                         ),
                     ) {

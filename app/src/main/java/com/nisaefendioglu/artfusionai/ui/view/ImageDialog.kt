@@ -22,6 +22,8 @@ import androidx.compose.ui.platform.LocalContext
 import coil.compose.rememberAsyncImagePainter
 import coil.request.ImageRequest
 import coil.size.Size
+import com.nisaefendioglu.artfusionai.ui.theme.RedPrimary
+import com.nisaefendioglu.artfusionai.ui.theme.BluePrimary
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -37,12 +39,12 @@ fun ImageDialog(imageUrl: String, onDismiss: () -> Unit) {
             Button(
                 onClick = { onDismiss() },
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(0xFFe63946),
+                    containerColor = RedPrimary,
                     contentColor = Color.White
                 ),
                 shape = RoundedCornerShape(12.dp),
                 modifier = Modifier
-                    .background(Color(0xFFe63946), shape = RoundedCornerShape(12.dp))
+                    .background(RedPrimary, shape = RoundedCornerShape(12.dp))
                     .padding(1.dp)
             ) {
                 Text("Close")
@@ -68,12 +70,12 @@ fun ImageDialog(imageUrl: String, onDismiss: () -> Unit) {
                     }
                 },
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(0xFF3a86ff),
+                    containerColor = BluePrimary,
                     contentColor = Color.White
                 ),
                 shape = RoundedCornerShape(12.dp),
                 modifier = Modifier
-                    .background(Color(0xFF3a86ff), shape = RoundedCornerShape(12.dp))
+                    .background(BluePrimary, shape = RoundedCornerShape(12.dp))
                     .padding(1.dp)
             ) {
                 Text("Download")
