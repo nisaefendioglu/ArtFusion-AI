@@ -187,14 +187,13 @@ fun ImageGeneratorScreen(viewModel: MainViewModel) {
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(bottom = 0.dp)
+                    .padding(bottom = 50.dp)
             ) {
                 GifImage(
                     modifier = Modifier
                         .align(Alignment.BottomCenter)
                         .fillMaxWidth()
                         .height(300.dp)
-                        .padding(0.dp)
                 )
             }
         }
