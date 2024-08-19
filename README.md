@@ -13,6 +13,10 @@
 - **Jetpack Compose**: Used for building the UI.
 - **Lexica.art API**: Provides the AI-powered image generation.
 
+## Screens
+
+<img width="1355" alt="Screenshot 2024-08-19 at 16 30 23" src="https://github.com/user-attachments/assets/0cf5261c-c854-45e6-ba1e-a01e819ab9c3">
+
 ## Installation
 
 1. Clone the repository:
