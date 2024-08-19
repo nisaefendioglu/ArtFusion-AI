@@ -186,17 +186,15 @@ fun ImageGeneratorScreen(viewModel: MainViewModel) {
         if (showImage && !expanded) {
             Box(
                 modifier = Modifier
-                    .fillMaxSize()
-                    .padding(bottom = 50.dp)
+                    .fillMaxSize(),
+                contentAlignment = Alignment.BottomCenter // Hem yatay hem de dikey hizalama için
             ) {
                 GifImage(
                     modifier = Modifier
-                        .align(Alignment.BottomCenter)
                         .fillMaxWidth()
                         .height(300.dp)
                 )
             }
         }
-
     }
 }
