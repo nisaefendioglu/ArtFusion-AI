@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ArtFusionAI"
         tools:targetApi="31">
-        <activityt
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.SplashScreen.MySplash">
@@ -23,7 +23,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activityt>
+        </activity>
     </application>
 
 </manifest>
