@@ -110,7 +110,7 @@ fun ImageGeneratorScreen(viewModel: MainViewModel) {
                             .padding(8.dp)
                             .background(Color.White, shape = RoundedCornerShape(12.dp))
                             .border(1.dp, Color.Gray, shape = RoundedCornerShape(12.dp)),
-                        placeholder = { Text("Enter image title") },
+                        placeholder = { Text("Enter image description") },
                         colors = TextFieldDefaults.colors(
                             focusedIndicatorColor = Color.Transparent,
                             unfocusedIndicatorColor = Color.Transparent,
